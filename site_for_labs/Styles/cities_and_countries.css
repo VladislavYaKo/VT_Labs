@@ -1,0 +1,56 @@
+
+@media screen and (orientation: landscape){
+	section{
+		background: #EFEFEF;
+		min-height: calc(92vh - 100px);
+	}
+
+	section #cities_and_countries_wrap{
+		box-sizing: border-box;
+		background: #E7E7E7;
+		width: 70%;
+		margin-left: 15%;
+		min-height: calc(92vh - 100px);
+		font-size: 1.6em;
+		padding: 1.2em 10% 1.2em 10%;
+		font-family: Trebuchet MS;
+	}
+
+	
+	#cities_and_countries_wrap a{
+		text-decoration: none;
+	}
+
+	#cities_and_countries_wrap a:hover{
+		text-decoration: underline;
+	}
+}
+
+@media screen and (orientation: portrait){
+	body{
+		margin: 0px;		
+		width: 100vw;
+		background: #200772;
+	}
+
+	section{
+		/*position: relative;*/
+		background: #EFEFEF;
+		min-height: calc(100vh - 130px - 100px);
+	}
+
+	section #cities_and_countries_wrap{
+		/*position: absolute;*/
+		box-sizing: border-box;
+		background: #E7E7E7;
+		width: 100%;		
+		min-height: calc(100vh - 130px - 100px);
+		font-size: 2.6em;
+		padding: 1.2em 5% 1.2em 5%;
+		font-family: Trebuchet MS;
+	}
+
+	#cities_and_countries_wrap a{
+		text-decoration: none;
+	}
+}

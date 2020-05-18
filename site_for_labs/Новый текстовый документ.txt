@@ -1,0 +1,72 @@
+@media screen and (orientation: portrait){
+	body{
+			margin: 0px;
+			width: 100vw;
+			background: #200772;
+	}
+
+	nav{
+		min-width: 605px;
+		height: 130px;
+		background: #447BD4;
+		overflow-x: auto;
+	}
+
+	#nav_menu_wrap{
+		width: 100%;
+		height: 100%;
+		min-height: 60px;
+		margin: 0 auto;
+		background: #447BD4;
+		font-size: 0px;  /*хз почему, но работает. Чтобы границы были вплотную друг к другу*/
+	}
+
+	a.nav_menu{
+		height: 100%;
+		display: inline-block;	
+		line-height: 130px;
+		text-decoration: none;
+		font-size: 30px;
+		font-family: Trebuchet MS;/*Comic Sans MS;*/
+		color: white;
+		width: calc(25% - 2px);
+		text-align: center;
+		margin-left: -1px;
+		border-left: 1px black solid;
+		border-right: 1px black solid;
+	}
+
+	#form_block{
+		position: relative;
+		background: #EFEFEF;	
+		/*width: 1000px;
+		height: 500px;*/
+		/*height: 53%;*/
+		width: 100%;
+		min-height: 432px;
+		min-width: 605px;
+		margin: 0 auto;
+		text-align: center;
+		background-image: url(../Images/index_background2.jpg);
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center;	
+	}
+
+	#form_wrap{
+		position: absolute;
+
+		/*display: inline-block;*/
+		background: rgba(10, 10, 255, .5);
+		box-shadow: 0px 0px 30px 10px rgb(10, 10, 255);
+		border-radius: 10px;
+		padding: 15px 10px 20px 10px;
+		/*height: 100px;*/
+		top: 50%;
+		/*margin-top: -50px;*/
+		left: 50%;
+		/*transform: translateY(-50%);
+		transform: translateX(-50%);*/
+		transform: translate(-50%, -50%);
+	}
+}

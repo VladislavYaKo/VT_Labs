@@ -1,0 +1,132 @@
+
+@media screen and (orientation: landscape){
+	section{
+		background: #EFEFEF;
+		min-height: calc(92vh - 100px);
+	}
+
+	section #booking_center_part{
+		position: relative;
+		box-sizing: border-box;
+		background: #E7E7E7;
+		width: 70%;
+		margin: 0 auto;
+		min-height: calc(92vh - 100px);
+		font-size: 1.4em;
+		/*padding: 1.2em 0;*/
+		font-family: Arial;
+	}
+
+	#booking_center_part #booking_wrap{
+		position: absolute;
+		height: 300px;
+		width: 100%;		
+		top: 50%;
+		transform: translateY(-200px);
+	}
+
+	#booking_center_part #booking_wrap h2{
+		text-align: center;
+	}
+
+	section #form_wrap{
+		background: #CACACA;
+		padding: 1em 5%;
+		border-top: 3px solid black;
+		border-bottom: 3px solid black;
+		text-align: center;
+	}
+
+	.form_part{
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.form_part span{
+		font-family: Arial;
+		font-size: 1em;
+	}
+
+	.form_part input{
+		font-family: Arial;
+		font-size: 0.8em;;
+	}
+
+	#form_part_button_wrap{
+		margin-top: 5px;
+		text-align: right;
+	}
+
+	section #form_wrap input[type="submit"]{
+		font-weight: bold;
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (orientation: portrait){
+	body{
+		margin: 0px;		
+		width: 100vw;
+		background: #200772;
+	}
+
+	section{
+		/*position: relative;*/
+		width: 100%;
+		background: #EFEFEF;
+		min-height: calc(100vh - 130px - 388px);
+	}
+
+	section #booking_center_part{
+		position: relative;
+		box-sizing: border-box;
+		background: #E7E7E7;
+		width: 100%;		
+		/*height: 100%;*/
+		min-height: calc(100vh - 130px - 388px);
+		font-size: 2.6em;
+		/*padding: 1.2em 0;*/
+		font-family: Trebuchet MS;
+	}
+
+	#booking_center_part #booking_wrap{
+		position: absolute;
+		/*height: 300px;*/
+		width: 100%; /*Происходит какая-то магия*/	
+		/*width: auto;*/
+		left: 50%;	
+		top: 50%;
+		transform: translate(-50%, -60%);
+	}
+
+	#booking_center_part #booking_wrap h2{
+		text-align: center;
+	}
+
+	#booking_wrap #form_wrap{
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	#form .form_part{
+		margin-bottom: 0.5em;
+	}
+
+	#form{
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.form_part input{
+		width: 100%;
+		font-size: 1em;
+	}
+
+	.form_part input[type="submit"]{
+		margin-top: 0.5em;
+		font-weight: bold;
+		width: auto;
+		border-width: 5px;
+	}
+}
