@@ -1,0 +1,128 @@
+
+@media screen and (orientation: landscape){
+	section{
+		background: #EFEFEF;		
+		min-height: calc(92vh - 100px);
+	}
+
+	section #about_hotels_wrap{
+		position: relative;
+		box-sizing: border-box;
+		background: #E7E7E7;
+		width: 70%;
+		margin-left: 15%;
+		min-height: calc(92vh - 100px);
+		overflow-y: auto;
+		font-size: 1.4em;
+		padding: 1.2em 5% 1.2em 5%;
+		font-family: Trebuchet MS;
+	}
+
+	#about_hotels_wrap h2{
+		text-align: center; 
+		margin-top: 0px;
+	}
+
+	#about_hotels_wrap:last-child{
+		margin-bottom: 0px;
+	}
+
+	.brief_hotel_info_wrap{
+		margin-bottom: 15px;
+	}
+	.brief_hotel_info_wrap .img{
+		display: inline-block;
+		float: left;
+		margin-right: 2%;
+		width: 60%;
+	}
+
+	.brief_hotel_info_wrap .img img{
+		width: 100%;
+		border: 2px solid black;
+	}
+
+	.brief_hotel_info_wrap .form_wrap{
+		display: inline-block;
+		width: 100%;
+		text-align: right;
+		/*float: right;*/
+		margin-top: 1.2em;
+	}
+
+	.form_wrap .form input{
+		background: #447BD4;
+		border-color: #447BD5; 
+		border-radius: 5px;
+		color: #E7E7E7;
+		height: 2.5em;
+		font-family: Trebuchet MS;
+		font-size: 0.7em;
+		text-align: center;
+	}
+
+	.form_wrap .form input:hover{
+		color: #200772;
+	}
+
+}
+
+@media screen and (orientation: portrait){
+	body{
+		margin: 0px;		
+		width: 100vw;
+		background: #200772;
+	}
+
+	section{
+		/*position: relative;*/
+		background: #EFEFEF;
+		min-height: calc(100vh - 130px - 100px);
+	}
+
+	section #about_hotels_wrap{
+		/*position: absolute;*/
+		/*overflow-y: auto;*/
+		box-sizing: border-box;
+		background: #E7E7E7;
+		width: 100%;		
+		/*height: 100%;*/
+		font-size: 2.6em;
+		padding: 1.2em 5% 1.2em 5%;
+		font-family: Trebuchet MS;
+	}
+
+	.brief_hotel_info_wrap .img{
+		width: 100%;
+		height: auto;
+				
+	}
+
+	.brief_hotel_info_wrap .img img{
+		width: 100%;
+		border: 2px solid black;
+	}
+
+	.brief_hotel_info_wrap .form_wrap{
+		display: inline-block;
+		width: 100%;
+		text-align: right;
+		/*float: right;*/
+		margin-top: 0.5em;
+	}
+
+	.form_wrap .form input{
+		background: #447BD4;
+		border-color: #447BD5;
+		border-radius: 5px;
+		color: #E7E7E7;
+		height: 2.5em;
+		font-family: Trebuchet MS;
+		font-size: 0.7em;
+		text-align: center;
+	}
+
+	.form_wrap .form input:hover{
+		color: #200772;
+	}
+}
