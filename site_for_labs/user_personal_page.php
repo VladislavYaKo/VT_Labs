@@ -45,6 +45,16 @@ if (isset($_POST['save'])){
     unset($_POST['save']);
 }
 
+if (isset($_SESSION['sending_result'])){
+    if ($_SESSION['sending_result'] == true){
+        $hidden_text = "Сообщение отправлено. Проверьте почту {$_SESSION['cont_email']}." ;
+        $display_style = '';
+    } else{
+        $hidden_text = "Сообщение не отправлено." ;
+        $display_style = '';
+    }
+}
+
 $sth = $dbh->prepare('SELECT * FROM `user_info` WHERE `id` = '.$user_info_id);
 $sth->execute();
 $user_info_arr = $sth->fetchAll(PDO::FETCH_ASSOC);

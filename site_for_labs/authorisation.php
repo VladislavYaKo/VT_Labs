@@ -37,7 +37,7 @@ if ($is_authorised){
     $_SESSION['login'] = $_POST['login'];
     //$_SESSION['user_id'] = $cur_user['id'];
     setcookie('user_id', $cur_user['id']);
-    setcookie('user_hash', md5($cur_user['id']));
+    setcookie('user_hash', md5($cur_user['id'].'hhh'));
     //$_SESSION['is_authorised'] = true;
     //header('Location: user_personal_page.php');
     header('Location: buffer_page.php');

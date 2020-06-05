@@ -16,7 +16,7 @@ function nav_footer($req_page_template, $is_authorised = false)
 }
 
 function check_user($user_id, $user_hash){
-    $correct_hash = md5($user_id);
+    $correct_hash = md5($user_id.'hhh');
     if (hash_equals($correct_hash, $user_hash))
         return true;
     else

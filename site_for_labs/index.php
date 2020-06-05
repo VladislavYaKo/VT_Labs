@@ -2,8 +2,8 @@
 require_once 'common_funcs_lib.php';
 
 session_start();
-/*setcookie('user_id', 6, time() - 60);
-setcookie('user_hash', md5('6'), time() - 60);
+/*setcookie('user_id', $_COOKIE['user_id'], time() - 60);
+setcookie('user_hash', md5($_COOKIE['user_id'].'hhh'), time() - 60);
 die();*/
 if (!isset($_SESSION['is_authorised']) || !isset($_COOKIE['user_id'])
     || !isset($_COOKIE['user_hash']))
@@ -15,15 +15,18 @@ if ($_SESSION['is_authorised'] == true)
 
 setlocale(LC_ALL, "ru_RU.UTF-8");
 
+//Начало проверки по регулярному выражению
 if (isset($_POST["Done"])){
-    $address = $_POST["town"];
+    $address = $_POST["location"];
     $address = trim($address);
-    $pattern = '#^г\.\s*[А-ЯЁ][а-яё]*,\s*(ул\.\s*[А-ЯЁ][а-яё]*|[A-Z][a-z]* st\.),\s*дом\s*\d+$(, кв.\s*\d+$)?#u';
+    $pattern = '#^г\.\s*[А-ЯЁ][а-яё]*,\s*(ул\.\s*[А-ЯЁ][а-яё ]*|[A-Z][a-z ]* st\.),\s*дом\s*\d+(, кв\.\s*\d+)?#u';
+    //$pattern = '#^г\.\s*[А-ЯЁ][а-яё]*,\s*(ул\.\s*[А-ЯЁ][а-яё ]*|[A-Z][a-z ]* st\.),\s*дом\s*\d+$(, кв\.\s*\d+$)?#u';
     $res_status = preg_match($pattern, $address);
     if ($res_status === 1)
     {
-        header('Location: hotels_found.php');
-        exit();
+        $town_css_style = 'border-color: blue; border-width: 10px;';
+        //header('Location: hotels_found.php');
+        //exit();
         /*$town_css_style = 'border-color: green;';*/
     } elseif ($res_status === false)
         $town_css_style = 'border-color: blue;';
@@ -31,6 +34,7 @@ if (isset($_POST["Done"])){
         $town_css_style = 'border-color: red;';
 } else
     $town_css_style = '';
+//Конец проверки
 
 chdir('Templates');
 $page_template = file_get_contents('index.tpl');
